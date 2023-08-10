@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 20:08:03 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 16:15:20 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/10 18:04:36 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	static	n_digits(int nb)
 char	*ft_itoa(int nb)
 {
 	int		len_num;
-	int		i;
 	char	*result;
 
 	len_num = n_digits(nb);
@@ -43,16 +42,15 @@ char	*ft_itoa(int nb)
 		result[0] = '-';
 	if (!nb)
 		result[0] = '0';
-	i = 0;
+	result[len_num] = '\0';
 	while (nb)
 	{
 		if (nb < 0)
-			result[len_num - i++ - 1] = '0' + -(nb % 10);
+			result[len_num-- - 1] = '0' + -(nb % 10);
 		else
-			result[len_num - i++ - 1] = '0' + nb % 10;
+			result[len_num-- - 1] = '0' + nb % 10;
 		nb /= 10;
 	}
-	result[len_num] = '\0';
 	return (result);
 }
 /*
