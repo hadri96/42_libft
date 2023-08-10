@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:20:23 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 18:06:49 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/10 18:49:40 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int		ft_strlen(char *str);
 int		ft_isalpha(char *str);
 int		ft_isdigit(char *str);
 int		ft_isprint(char *str);
+int		ft_isascii(char *str);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 
