@@ -6,13 +6,13 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 20:08:03 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/09 23:24:14 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/10 16:13:38 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	n_digits(int nb)
+int	static	n_digits(int nb)
 {
 	int	i;
 

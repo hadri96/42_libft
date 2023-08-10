@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 23:32:33 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/09 23:47:41 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/10 16:11:58 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+int	static	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == ' ')
 		return (1);
