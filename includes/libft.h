@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:20:23 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/11 16:39:13 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/11 16:57:57 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n);
 char	*ft_strcpy(char *dest, const char *src);
 char 	*ft_strncpy(char *dest, const char *src, size_t n);
 
-char 	*ft_itoa(int nb);
+void	ft_bzero(void *s, size_t n);
+
+char	*ft_itoa(int nb);
 int		ft_atoi(char *str);
 
 #endif
