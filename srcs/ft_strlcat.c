@@ -1,0 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/11 13:45:00 by hmorand           #+#    #+#             */
+/*   Updated: 2023/08/11 14:17:36 by hmorand          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+
+size_t	static ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+	size_t	j;
+
+	i = ft_strlen(dest);
+	j = 0;
+	while (src[j] && i < n - 1)
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	while (src[j++])
+		i++;
+	return (i);
+}
+
+/* #include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	// Test Case 1: Concatenating strings within buffer size
+	char dest1[20] = "Hello, ";
+	char dest2[20] = "Hello, ";
+	const char *src = "world!";
+	size_t result1_ft, result1_std;
+
+	result1_ft = ft_strlcat(dest1, src, sizeof(dest1));
+	result1_std = strlcat(dest2, src, sizeof(dest2));
+
+	printf("Test Case 1: Concatenating strings within buffer size\n");
+	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n", result1_ft, dest1);
+	printf("Standard function result: %zu, Updated Destination: \"%s\"\n", result1_std, dest2);
+
+	// Test Case 2: Concatenating strings beyond buffer size
+	char dest3[10] = "Hello, ";
+	char dest4[10] = "Hello, ";
+	const char *long_src = "world!";
+	size_t result2_ft, result2_std;
+
+	result2_ft = ft_strlcat(dest3, long_src, sizeof(dest3));
+	result2_std = strlcat(dest4, long_src, sizeof(dest4));
+	printf("----------------------------------------------------------------\n");
+	printf("Test Case 2: Concatenating strings beyond buffer size\n");
+	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n", result2_ft, dest3);
+	printf("Standard function result: %zu, Updated Destination: \"%s\"\n", result2_std, dest4);
+
+	return 0;
+}
+ */
