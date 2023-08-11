@@ -6,13 +6,13 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 13:45:00 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/11 14:17:36 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/11 14:19:49 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	static ft_strlen(char *str)
+size_t	static	ft_strlen(char *str)
 {
 	int	i;
 
@@ -52,8 +52,10 @@ int	main(void)
 	result1_std = strlcat(dest2, src, sizeof(dest2));
 
 	printf("Test Case 1: Concatenating strings within buffer size\n");
-	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n", result1_ft, dest1);
-	printf("Standard function result: %zu, Updated Destination: \"%s\"\n", result1_std, dest2);
+	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n",
+	result1_ft, dest1);
+	printf("Standard function result: %zu, Updated Destination: \"%s\"\n",
+	result1_std, dest2);
 
 	// Test Case 2: Concatenating strings beyond buffer size
 	char dest3[10] = "Hello, ";
@@ -65,8 +67,10 @@ int	main(void)
 	result2_std = strlcat(dest4, long_src, sizeof(dest4));
 	printf("----------------------------------------------------------------\n");
 	printf("Test Case 2: Concatenating strings beyond buffer size\n");
-	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n", result2_ft, dest3);
-	printf("Standard function result: %zu, Updated Destination: \"%s\"\n", result2_std, dest4);
+	printf("Homemade function result: %zu, Updated Destination: \"%s\"\n",
+	result2_ft, dest3);
+	printf("Standard function result: %zu, Updated Destination: \"%s\"\n",
+	result2_std, dest4);
 
 	return 0;
 }
