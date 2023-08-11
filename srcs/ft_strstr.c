@@ -6,26 +6,28 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 17:19:20 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 18:43:00 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/11 13:54:02 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strstr(char *str, char *substr)
+char	*ft_strstr(const char *str, const char *substr)
 {
 	int	i;
+	int	j;
 
-	while (*str)
+	j = 0;
+	while (str[j])
 	{
 		i = 0;
-		while (str[i] == substr[i])
+		while (str[i + j] == substr[i])
 		{
 			if (!substr[i + 1])
-				return (str);
+				return (str + j);
 			i++;
 		}
-		str++;
+		j++;
 	}
 	return (NULL);
 }
