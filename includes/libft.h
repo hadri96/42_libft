@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:20:23 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/11 14:44:38 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/11 16:39:13 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ char	*ft_strnstr(char *str, const char *substr, size_t len);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
+char	*ft_strcpy(char *dest, const char *src);
+char 	*ft_strncpy(char *dest, const char *src, size_t n);
 
-char	*ft_itoa(int nb);
+char 	*ft_itoa(int nb);
 int		ft_atoi(char *str);
 
 #endif
