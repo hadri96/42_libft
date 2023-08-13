@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 17:27:36 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/09 23:10:35 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 15:26:53 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ char	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-/* #include <stdio.h>
+/*
+#include <stdio.h>
+#include <ctype.h>
 
 int	main(void)
 {
@@ -27,6 +28,7 @@ int	main(void)
 
 	printf("Uppercase char: %c\n", c1);
 	printf("Lowercase char: %c\n", c2);
-	printf("Uppercase char: %c", c3);
+	printf("Uppercase char: %c\n", c3);
+	printf("Negative hexadecimal: %u", tolower('\200'));
 }
  */

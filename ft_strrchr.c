@@ -6,34 +6,26 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:26:16 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 16:41:38 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 16:49:46 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
-	int	j;
 
-	i = 0;
-	j = 0;
-	while (str[i])
+	i = ft_strlen(str);
+	if (c == '\0')
+		return ((char *)str + i);
+	while (i >= 0)
 	{
 		if (str[i] == c)
-		{
-			str += i;
-			i = 0;
-		}
-		i++;
-		j++;
+			return ((char *)str + i);
+		i--;
 	}
-	if (c == '\0')
-		return (str + i);
-	if (i == j && *str != c)
-		return (NULL);
-	return (str);
+	return (NULL);
 }
 /*
 #include <stdio.h>

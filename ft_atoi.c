@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 23:32:33 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 18:42:53 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 16:16:29 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,43 @@ int	static	ft_isspace(char c)
 	return (0);
 }
 
-int	ft_atoi(char *str)
+void	static	ft_strip(const char *str, int *i, int *result)
+{
+	*result = 0;
+	*i = 0;
+	while (ft_isspace(str[*i]))
+		(*i)++;
+}
+
+void	static	ft_sign(const char c, int *signs, int *sign)
+{
+	(*signs)++;
+	if (c == '-')
+		(*sign) *= -1;
+}
+
+int	ft_atoi(const char *str)
 {
 	int	result;
 	int	sign;
 	int	signs;
+	int	i;
 
 	signs = 0;
 	sign = 1;
-	result = 0;
-	while (*str)
+	ft_strip(str, &i, &result);
+	while (str[i])
 	{
-		if (result == 0 && signs == 0 && ft_isspace(*str))
-			;
-		else if ((*str == '-' || *str == '+') && result == 0)
+		if ((str[i] == '-' || str[i] == '+') && result == 0 && signs == 0)
+			ft_sign(str[i], &signs, &sign);
+		else if (str[i] >= '0' && str[i] <= '9')
 		{
-			if (*str == '-')
-				sign *= -1;
 			signs++;
+			result = result * 10 + (str[i] - '0');
 		}
-		else if (*str >= '0' && *str <= '9')
-			result = result * 10 + (*str - '0');
 		else
 			return (sign * result);
-		str++;
+		i++;
 	}
 	return (sign * result);
 }
@@ -64,7 +77,10 @@ int main(void)
 		   ft_atoi("  -A123453"));
 	printf("Valid with letter in the middle: %d\n",
 		   ft_atoi("  -1234AD53"));
-	printf("Valid with many signs in front: %d\n",
+	printf("Invalid with many signs in front: %d\n",
 		   ft_atoi("  --+-+123345"));
+	printf("Valid with 0 separated by space: %d\n",
+		   ft_atoi("0 49"));
 }
+
  */
