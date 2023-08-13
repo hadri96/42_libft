@@ -6,18 +6,14 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:32:57 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 18:50:20 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 10:27:15 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(char c)
 {
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-			return (0);
-		str++;
-	}
+	if (c < '0' || c > '9')
+		return (0);
 	return (1);
 }
 /*
@@ -25,10 +21,8 @@ int	ft_isdigit(char *str)
 
 int	main(void)
 {
-	printf("Only uppercase: %d\n", ft_isdigit("KAJHSKASHKDFHKWHD"));
-	printf("Only lowercase: %d\n", ft_isdigit("akhdkhdkahsdkjsahd"));
-	printf("Mixed cases lowercase: %d\n", ft_isdigit("skhAJKHSKJhaKJH"));
-	printf("Mixed numbers and letters: %d\n", ft_isdigit("akdhadh23323"));
-	printf("Only numbers: %d\n", ft_isdigit("23323"));
+	printf("Uppercase: %d\n", ft_isdigit('H));
+	printf("Lowercase: %d\n", ft_isdigit('a));
+	printf("Number: %d\n", ft_isdigit('5'));
 }
  */

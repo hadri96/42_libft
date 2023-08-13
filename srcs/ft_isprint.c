@@ -6,18 +6,14 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 17:24:47 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/09 23:10:12 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 10:25:42 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char *str)
+int	ft_isprint(char c)
 {
-	while (*str)
-	{
-		if (*str < ' ' || *str > '~')
-			return (0);
-		str++;
-	}
+	if (c < ' ' || c > '~')
+		return (0);
 	return (1);
 }
 /*
@@ -25,9 +21,8 @@ int	ft_isprint(char *str)
 
 int	main(void)
 {
-	printf("Only uppercase: %d\n", ft_isprint("KAJHSKASHKDFHKWHD"));
-	printf("Only lowercase: %d\n", ft_isprint("akhdkhdkahsdkjsahd"));
-	printf("Mixed cases lowercase: %d\n", ft_isprint("skhAJKHSKJhaKJH"));
-	printf("With non-printable: %d\n", ft_isprint("akdh\tadh23323"));
+	printf("Uppercase: %d\n", ft_isprint('H'));
+	printf("Lowercase: %d\n", ft_isprint('a'));
+	printf("With non-printable: %d\n", ft_isprint('\t'));
 }
  */
