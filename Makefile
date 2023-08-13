@@ -20,16 +20,17 @@ SRCS = srcs/ft_strlen.c \
 	   srcs/ft_strlcat.c \
 	   srcs/ft_strcpy.c \
 	   srcs/ft_strncpy.c \
+	   srcs/ft_strdup.c \
 	   srcs/ft_bzero.c \
 	   srcs/ft_memccpy.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 
-HEADER_DIR=includes
+HEADER_DIR=libft.h
 
 CC = cc
 
-CFLAGS=-Wall -Werror -Wextraj -I $(HEADER_DIR)
+CFLAGS=-Wall -Werror -Wextra -I $(HEADER_DIR)
 
 .PHONY: all clean fclean re
 

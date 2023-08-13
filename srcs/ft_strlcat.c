@@ -6,15 +6,15 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 13:45:00 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/11 14:19:49 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 15:25:22 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	static	ft_strlen(char *str)
+static	size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -27,14 +27,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	size_t	i;
 	size_t	j;
 
-	i = ft_strlen(dest);
+	i = 0;
 	j = 0;
-	while (src[j] && i < n - 1)
-		dest[i++] = src[j++];
-	dest[i] = '\0';
-	while (src[j++])
+	while (dest[i] && i < n)
 		i++;
-	return (i);
+	while (src[j] && i + j + 1 < n)
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	if (i < n)
+		dest[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
 
 /* #include <stdio.h>

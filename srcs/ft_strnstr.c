@@ -6,25 +6,27 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 14:32:37 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/11 14:45:17 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/13 15:44:53 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strnstr(char *str, const char *substr, size_t len)
+char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	j = 0;
+	if (substr[0] == '\0')
+		return ((char *)str);
 	while (str[j] && j < len)
 	{
 		i = 0;
 		while (str[i + j] == substr[i] && i + j < len)
 		{
 			if (!substr[i + 1])
-				return (str + j);
+				return ((char *)str + j);
 			i++;
 		}
 		j++;
