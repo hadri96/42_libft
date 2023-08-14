@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:26:16 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/14 10:37:48 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 13:38:56 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strrchr(const char *str, int c)
 	i = ft_strlen(str);
 	while (i >= 0)
 	{
-		if (str[i] == c)
-			return ((char *)str + i);
+		if (((unsigned char *)str)[i] == (unsigned char)c)
+			return (((char *)str) + i);
 		i--;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 10:53:05 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/14 11:22:23 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 13:45:13 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	if (!dest && !src)
+		return (NULL);
 	while (n)
 	{
 		n--;
