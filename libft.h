@@ -6,13 +6,14 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:20:23 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/14 16:11:38 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 17:13:19 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
@@ -45,5 +46,10 @@ void	*ft_calloc(size_t nmemb, size_t size);
 
 char	*ft_itoa(int nb);
 int		ft_atoi(const char *str);
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
