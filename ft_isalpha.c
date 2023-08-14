@@ -6,9 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:23:59 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/14 10:26:02 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:38:34 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(char c)
 {

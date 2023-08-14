@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 20:08:03 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/10 18:04:36 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:42:53 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	static	n_digits(int nb)
 {

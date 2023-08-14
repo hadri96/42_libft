@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 23:32:25 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/12 16:15:21 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:38:28 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

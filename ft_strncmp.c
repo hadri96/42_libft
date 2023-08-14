@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:49:18 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/13 15:39:53 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:41:27 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {

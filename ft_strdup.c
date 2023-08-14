@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 19:54:04 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/13 10:41:54 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:39:54 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

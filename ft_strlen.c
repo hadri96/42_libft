@@ -6,9 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 11:19:18 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/13 10:28:56 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:41:21 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 14:32:37 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/13 15:44:53 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 10:41:30 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
