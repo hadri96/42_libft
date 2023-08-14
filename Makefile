@@ -23,7 +23,8 @@ SRCS = ft_strlen.c \
 	   ft_memmove.c \
 	   ft_memchr.c \
 	   ft_memcmp.c \
-	   ft_calloc.c
+	   ft_calloc.c \
+	   ft_strjoin.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 
