@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 17:11:04 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/14 10:39:11 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/14 11:47:02 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (dest > src)
+	if (!dest && !src)
+		return (NULL);
+	i = 0;
+	if (src > dest)
 	{
-		i = 0;
 		while (n > i)
 		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			((char *)dest)[i] = ((char *)src)[i];
 			i++;
 		}
 	}
 	else
 	{
-		i = n;
-		while (i > 0)
+		while (n)
 		{
-			i--;
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			n--;
+			((char *)dest)[i] = ((char *)src)[i];
 		}
 	}
 	return (dest);
