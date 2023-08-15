@@ -25,6 +25,7 @@ SRCS = ft_strlen.c \
 	   ft_memcmp.c \
 	   ft_calloc.c \
 	   ft_substr.c \
+	   ft_strtrim.c \
 	   ft_strjoin.c \
 	   ft_strmapi.c \
 	   ft_striteri.c \
