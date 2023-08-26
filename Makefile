@@ -27,6 +27,7 @@ SRCS = ft_strlen.c \
 	   ft_substr.c \
 	   ft_strtrim.c \
 	   ft_strjoin.c \
+	   ft_split.c \
 	   ft_strmapi.c \
 	   ft_striteri.c \
 	   ft_putchar_fd.c \
@@ -35,6 +36,17 @@ SRCS = ft_strlen.c \
 	   ft_putnbr_fd.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
+
+BSRCS = ft_lstnew.c \
+		ft_lstsize.c \
+		ft_lstadd_front.c \
+		ft_lstadd_back.c \
+		ft_lstclear.c \
+		ft_lstlast.c \
+		ft_lstiter.c \
+		ft_lstdelone.c
+
+BOBJS = $(patsubst %.c,%.o,$(BSRCS))
 
 HEADER_DIR=libft.h
 
@@ -52,8 +64,11 @@ $(NAME): $(OBJS)
 %.o:%.c
 	$(CC) $(CFLAGS) -c -o $@ $^
 
+bonus: $(OBJS) $(BOBJS)
+	ar -rcs $(NAME) $^
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -f $(NAME)
