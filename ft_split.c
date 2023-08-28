@@ -6,7 +6,7 @@
 /*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 15:31:31 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/26 10:21:51 by hmorand          ###   ########.fr       */
+/*   Updated: 2023/08/28 07:42:16 by hmorand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,29 @@ static	char	*extract_word(char const *s, size_t sep)
 	return (word);
 }
 
+static	void	free_words(char ***result, size_t words)
+{
+	size_t	count;
+	size_t	i;
+
+	count = -1;
+	i = -1;
+	while (words > ++count)
+	{
+		if ((*result)[count] == NULL)
+		{
+			while (words > ++i)
+			{
+				if ((*result)[i])
+					free((*result)[i]);
+			}
+			free(*result);
+			*result = NULL;
+			return ;
+		}
+	}
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -74,8 +97,6 @@ char	**ft_split(char const *s, char c)
 	if (!result)
 		return (NULL);
 	j = 0;
-	while (*s == c)
-		s++;
 	while (j < words && *s)
 	{
 		sep = next_word(s, c);
@@ -87,6 +108,7 @@ char	**ft_split(char const *s, char c)
 		s += sep + 1;
 	}
 	result[j] = NULL;
+	free_words(&result, words);
 	return (result);
 }
 
