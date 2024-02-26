@@ -1,51 +1,64 @@
 NAME = libft.a
 
-SRCS = ft_strlen.c \
-	   ft_isalpha.c \
-	   ft_isdigit.c \
-	   ft_isalnum.c \
-	   ft_isprint.c \
-	   ft_isascii.c \
-	   ft_strncmp.c \
-	   ft_toupper.c \
-	   ft_tolower.c \
-	   ft_strchr.c \
-	   ft_strrchr.c \
-	   ft_strnstr.c \
-	   ft_itoa.c \
-	   ft_atoi.c \
-	   ft_strlcat.c \
-	   ft_strlcpy.c \
-	   ft_strdup.c \
-	   ft_bzero.c \
-	   ft_memcpy.c \
-	   ft_memset.c \
-	   ft_memmove.c \
-	   ft_memchr.c \
-	   ft_memcmp.c \
-	   ft_calloc.c \
-	   ft_substr.c \
-	   ft_strtrim.c \
-	   ft_strjoin.c \
-	   ft_split.c \
-	   ft_strmapi.c \
-	   ft_striteri.c \
-	   ft_putchar_fd.c \
-	   ft_putstr_fd.c \
-	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c
+SRCS = is/ft_isalpha.c \
+	   is/ft_isdigit.c \
+	   is/ft_isalnum.c \
+	   is/ft_isprint.c \
+	   is/ft_isascii.c \
+	   string/ft_strlen.c \
+	   string/ft_strncmp.c \
+	   string/ft_toupper.c \
+	   string/ft_tolower.c \
+	   string/ft_strchr.c \
+	   string/ft_strrchr.c \
+	   string/ft_strnstr.c \
+	   string/ft_itoa.c \
+	   string/ft_atoi.c \
+	   string/ft_strlcat.c \
+	   string/ft_strlcpy.c \
+	   string/ft_strdup.c \
+	   string/ft_substr.c \
+	   string/ft_strtrim.c \
+	   string/ft_strjoin.c \
+	   string/ft_split.c \
+	   string/ft_strmapi.c \
+	   string/ft_striteri.c \
+	   memory/ft_bzero.c \
+	   memory/ft_memcpy.c \
+	   memory/ft_memset.c \
+	   memory/ft_memmove.c \
+	   memory/ft_memchr.c \
+	   memory/ft_memcmp.c \
+	   memory/ft_calloc.c \
+	   memory/free_strarr.c \
+	   put/ft_putchar_fd.c \
+	   put/ft_putstr_fd.c \
+	   put/ft_putendl_fd.c \
+	   put/ft_putnbr_fd.c \
+	   printf/ft_printf.c \
+	   printf/ft_puthex.c \
+	   printf/ft_putnbr.c \
+	   printf/ft_putptr.c \
+	   printf/ft_putstr.c \
+	   garbage/galloc.c \
+	   garbage/garbage_utils.c \
+	   garbage/gfree.c \
+	   get_next_line/get_next_line.c \
+	   get_next_line/get_next_line_utils.c \
+	   arr_utils/arr_len.c \
+	   arr_utils/arr_insert.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 
-BSRCS = ft_lstnew.c \
-		ft_lstsize.c \
-		ft_lstadd_front.c \
-		ft_lstadd_back.c \
-		ft_lstclear.c \
-		ft_lstlast.c \
-		ft_lstiter.c \
-		ft_lstmap.c \
-		ft_lstdelone.c
+BSRCS = linked_lists/ft_lstnew.c \
+		linked_lists/ft_lstsize.c \
+		linked_lists/ft_lstadd_front.c \
+		linked_lists/ft_lstadd_back.c \
+		linked_lists/ft_lstclear.c \
+		linked_lists/ft_lstlast.c \
+		linked_lists/ft_lstiter.c \
+		linked_lists/ft_lstmap.c \
+		linked_lists/ft_lstdelone.c
 
 BOBJS = $(patsubst %.c,%.o,$(BSRCS))
 

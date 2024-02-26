@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hmorand <hmorand@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 11:20:23 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/26 13:26:05 by hmorand          ###   ########.fr       */
+/*   Created: 2024/02/23 14:27:02 by hmorand           #+#    #+#             */
+/*   Updated: 2024/02/23 14:27:02 by hmorand          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+# include <stdarg.h>
+# include "garbage.h"
+# include "get_next_line.h"
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                     IS                                     */
+/*                                                                            */
+/* ************************************************************************** */
 
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
@@ -23,6 +32,12 @@ int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_strncmp(char *s1, char *s2, size_t n);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                   STRING                                   */
+/*                                                                            */
+/* ************************************************************************** */
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -38,6 +53,12 @@ char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                   MEMORY                                   */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strdup(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -46,14 +67,27 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	free_strarr(char **arr);
 
 char	*ft_itoa(int nb);
 int		ft_atoi(const char *str);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                    PUTS                                    */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                               LINKED_LISTS                                 */
+/*                                                                            */
+/* ************************************************************************** */
 
 typedef struct s_list
 {
@@ -70,5 +104,30 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                ARR_UTILS                                   */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		strarr_len(char **arr);
+char	**arr_insert(char **arr, int pos, char *elem);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                 PRINT_F                                    */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putchar(char c, int *i);
+void	ft_putstr(char *str, int *i);
+void	ft_putnbr(int nb, int *i);
+void	ft_putunnbr(unsigned int nb, int *i);
+void	ft_puthex_long(long unsigned int nb, int *i);
+void	ft_puthex_up(unsigned int nb, int *i);
+void	ft_puthex_low(unsigned int nb, int *i);
+void	ft_putptr(void *ptr, int *i);
+int		ft_printf(const char *str, ...);
 
 #endif
