@@ -23,6 +23,7 @@ SRCS = is/ft_isalpha.c \
 	   string/ft_split.c \
 	   string/ft_strmapi.c \
 	   string/ft_striteri.c \
+	   string/join_strarr.c \
 	   memory/ft_bzero.c \
 	   memory/ft_memcpy.c \
 	   memory/ft_memset.c \
