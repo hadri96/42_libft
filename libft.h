@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmorand <hmorand@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 12:59:45 by hmorand           #+#    #+#             */
-/*   Updated: 2024/02/26 13:00:27 by hmorand          ###   ########.ch       */
+/*   Created: 2024/02/27 09:49:32 by hmorand           #+#    #+#             */
+/*   Updated: 2024/02/27 09:49:32 by hmorand          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 int		strarr_len(char **arr);
 char	**arr_insert(char **arr, int pos, char *elem);
+char	**strarr_pop(char **arr, int index);
 
 /* ************************************************************************** */
 /*                                                                            */
