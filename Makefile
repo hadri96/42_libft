@@ -14,6 +14,7 @@ SRCS = is/ft_isalpha.c \
 	   string/ft_strnstr.c \
 	   string/ft_itoa.c \
 	   string/ft_atoi.c \
+	   string/ft_atoll.c \
 	   string/ft_strlcat.c \
 	   string/ft_strlcpy.c \
 	   string/ft_strdup.c \
