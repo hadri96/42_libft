@@ -48,7 +48,8 @@ SRCS = is/ft_isalpha.c \
 	   get_next_line/get_next_line_utils.c \
 	   arr_utils/arr_len.c \
 	   arr_utils/arr_insert.c \
-	   arr_utils/arr_pop.c
+	   arr_utils/arr_pop.c \
+	   numbers/max.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmorand <hmorand@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hmorand <hmorand@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 16:00:55 by hmorand           #+#    #+#             */
-/*   Updated: 2023/08/12 17:04:02 by hmorand          ###   ########.fr       */
+/*   Created: 2024/04/26 11:35:31 by hmorand           #+#    #+#             */
+/*   Updated: 2024/04/26 11:35:31 by hmorand          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ int	main(void)
 	char src2[] = "Hello, world!";
 	char dest2[20];
 
-	printf("\nTest Case 2: Copying bytes when specified character is not found\n");
+	printf("\nTest Case 2: Copying bytes when
+	 specified character is not found\n");
 	printf("Source: \"%s\"\n", src2);
 
 	char *result2 = ft_memccpy(dest2, src2, 'l', sizeof(src2));

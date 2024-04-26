@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmorand <hmorand@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 09:49:32 by hmorand           #+#    #+#             */
-/*   Updated: 2024/02/27 09:49:32 by hmorand          ###   ########.ch       */
+/*   Created: 2024/04/26 11:39:48 by hmorand           #+#    #+#             */
+/*   Updated: 2024/04/26 11:39:48 by hmorand          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char 	*join_argv(char **argv, int argc);
+char	*join_argv(char **argv, int argc);
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -94,7 +94,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}t_list;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
@@ -131,5 +131,14 @@ void	ft_puthex_up(unsigned int nb, int *i);
 void	ft_puthex_low(unsigned int nb, int *i);
 void	ft_putptr(void *ptr, int *i);
 int		ft_printf(const char *str, ...);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                 NUMBERS                                    */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		min(int count, ...);
+int		max(int count, ...);
 
 #endif
